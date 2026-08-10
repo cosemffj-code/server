@@ -1,0 +1,14 @@
+services:
+  frontend:
+    image: ghcr.io/cosemffj-code/myapp-frontend:latest
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+
+  backend:
+    image: ghcr.io/cosemffj-code/myapp-backend:latest
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
