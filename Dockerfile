@@ -9,4 +9,4 @@ COPY . .
 ENV PORT=4000
 EXPOSE 4000
 
-CMD ["node", "index.js"]
+CMD ["node", "app.js"]
