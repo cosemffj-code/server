@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 4000;
 app.use(cors());
 
 app.get('/api', (req, res) => {
-  res.send('안녕하세요1, Express!');
+  res.send('안녕하세요2, Express!');
 });
 
 app.listen(PORT, () => {
