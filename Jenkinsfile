@@ -53,7 +53,7 @@ pipeline {
         stage('Push to GHCR') {
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'ge8c086af-da2f-4153-be7c-93e3a1a204c6',
+                    credentialsId: 'e8c086af-da2f-4153-be7c-93e3a1a204c6',
                     usernameVariable: 'GHCR_USER',
                     passwordVariable: 'GHCR_TOKEN'
                 )]) {
