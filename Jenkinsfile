@@ -24,8 +24,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-                bat 'node -v'
-                bat 'docker -v'
+                bat 'node -v'    // bat 명령어가 실패하면 여기서 멈춘다.
+                bat 'docker -v'  // 
+                
             }
         }
 
@@ -52,7 +53,7 @@ pipeline {
         stage('Push to GHCR') {
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'ghcr-token',
+                    credentialsId: 'ge8c086af-da2f-4153-be7c-93e3a1a204c6',
                     usernameVariable: 'GHCR_USER',
                     passwordVariable: 'GHCR_TOKEN'
                 )]) {
